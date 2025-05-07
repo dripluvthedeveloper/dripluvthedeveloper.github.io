@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog Post</title>
+  <style>
+    html {
+      height: 100%;
+      background: url('images/backgroundpaper.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 5vw;
+      padding-top: 180px; /* Leaves space for the fixed banner */
+      color: #000;
+      min-height: 200vh;
+      box-sizing: border-box;
+    }
+
+    .top-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .top-left-image {
+      display: block;
+      max-width: 200%;
+      height: auto;
+      margin-bottom: 1vw;
+    }
+
+    .play-button {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 2vw;
+    }
+
+    .meta {
+      color: #555;
+      font-size: 4vw;
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: 4.5vw;
+      line-height: 1.6;
+      max-width: 100%;
+    }
+
+    .audio-container {
+      margin-bottom: 2vw;
+    }
+
+    iframe {
+      display: none; /* Hide the video iframe, only play audio */
+    }
+
+    /* New styling for side-by-side images */
+    .scattered-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Space between the images */
+      margin-top: 50px; /* Adjust spacing from text */
+      align-items: flex-start;
+    }
+
+    .scattered-images img {
+      width: 45%; /* Increased image size */
+      height: auto;
+      opacity: 1;
+      transform: rotate(-2deg); /* Slight rotation for style */
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 40px;
+        padding-top: 180px;
+      }
+
+      .top-left-image {
+        max-width: 30%;
+      }
+
+      .meta, p {
+        font-size: 1em;
+      }
+
+      p {
+        max-width: 800px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Top Banner -->
+  <img src="images/banner.png" class="top-banner" alt="Top Banner" />
+
+  <!-- Painting -->
+  <img src="images/blogpost1painting_genesis.png" class="top-left-image" alt="Blog Post Painting" />
+
+  <!-- Play Button and YouTube Audio -->
+  <div class="audio-container">
+    <button class="play-button" onclick="playAudio()">Play</button>
+    <iframe id="audioPlayer" width="0" height="0" src="https://www.youtube.com/embed/TgB6qiqPKC8?autoplay=1&controls=0" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <div class="meta">by jsquared</div>
+
+  <p>
+    Genesis. Creation. Beginnings. In the Bible, God created the world in 7 days. In the book of Tino and Dripluv, 2024 was a whole year of constant reinvention. 
+
+    Whilst people declared a new year, a new them, Tino was stuck in a drowsy state of stress and disorientation. It’s the feeling on your shoulders when time is weighing them down, the void in the pit of your stomach when you’re hungry. Dripluv was feeling optimistic. This year would be their year.
+
+    The planning started. 
+
+    For Tino, the urgency to make music was sparked by observing his peers. The people around him were achieving milestones that inspired him to do more. Music had been something natural to him, akin to breathing, but recently, the music hadn’t been feeling as authentic anymore. It felt “accessible and plain. Technically good, without evoking any emotion. It felt formulaic.” 
+
+    Tino took up DJing as a way to experiment. It introduced him to different sounds, made him realise he liked to bring people together through music and dance, but the formula could only be broken by the people that the duo met throughout 2024.
+
+    One of these people, JP, was the key. “JP meant everything, means everything, is everything.” The musical chemistry made itself known from the start; Tino and JP were like “two sides of the same coin.” Where Tino lacked, JP made up, and the motivation flowed from it. “It’s good to have someone who inspires me regularly, creatively and on a personal level.” Inspiration came through connection in the form of many different people, though. From KB, who undertook the DJ journey with Tino, to Josh, owner of 122 and Fiction, who provided a space to practice with professional equipment and the DJ duo’s first real club gigs. Tevinho, who acted as a mentor to Dripluv and Tino and pushed the idea that they needed to be unafraid to take action. Musonga, who opened their eyes to the visual and whose success created a benchmark. Gavin and Brad, whose youth and passion were grounding and invigorating. Tivien, Chris, and many others came to be the building blocks of a community of artists who reinforced Tino and Dripluv’s passion and pushed them again and again to be better. 
+
+    And with the help of these people, ITSJUSTUS was created: a space where creatives gathered who looked like them and felt the same way they did about art. The setup was inspired by an @xmunashe gig, with the music centred in the middle of the floor, and the audience gathered around it. The energy was electrifying. It was a pivotal moment for Dripluv because “it showed me how magnetic an event like that can be. If people connect with something, you get a lot of eyes on it.” Everything felt right. Everything fell into place. The process was the most fun: the brainstorming, the photo and video shoots, the posters. It was a community effort. Their little uni room became “the watering hole for art and friends.” A space for people who had a dream to come and execute it. 
+
+    A reminder for all those in the creative industry: take time and enjoy the journey. In the face of craving success, realising that you are not where you envisioned you would be, it is the stopping and appreciating the present that will save you. Don’t just trust the process, find joy in it.
+
+    But then November took its toll. For Tino, it was rock bottom. The days were a blurred together mess of working full time at a job he hated and stressing about where he was going to live next as plan after plan fell through. He was sitting on 3 albums, and none of them were what he wanted, or needed, at that point in time. The music seemed to dry up and die out. The feeling came back: time sitting on his shoulders, making him feel like he needed to “have made it by yesterday.” Canberra, although a place of good memories and even better people, wasn’t the best option anymore.
+
+    And so a decision was made: Tino switched cities. It was almost completely impulsive, the decision only finalised as 2024 was coming to a close. 
+
+    Where a door closes a window opens. When a chapter ends, a new one will begin. Now it’s 2025, and the duo is ready to make a comeback. During the creative block, Tino feared being forgotten, but took the opportunity to consume more art in all its mediums. Tino and Dripluv have been figuring out what it means to create, and how to truly be an artist. 
+
+    Thus concludes the Genesis. 2024 was formative. Lessons were learned. It helped the creative duo find their roots, build foundations, and form connections. They grew not only their knowledge of business and music, but also their knowledge of themselves. Make no mistake: this is not their final form. They will continue to grow, continue to build community, continue to experiment and make mistakes and feel the pressure of success. This is only the beginning. Tune in to what they have coming next, because whatever it is, you know it will be magnetic. 
+  </p>
+
+  <div class="scattered-images" id="scatteredImages"></div>
+
+  <script>
+    window.onload = function () {
+      const imageSources = [
+        'images/1.heic',
+        'images/2.heic',
+        'images/3.jpg',
+        'images/4.jpg',
+        'images/5.jpg',
+        'images/6.heic'
+      ];
+
+      const container = document.getElementById('scatteredImages');
+      const verticalSpacing = 150; // overlap slightly more
+      const offsetBase = 1000; // Adjust closer to the text
+
+      imageSources.forEach((src, i) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Scattered Image ${i + 1}`;
+        img.style.marginRight = '10px';  // Added some space between the images
+        container.appendChild(img);
+      });
+    };
+
+    function playAudio() {
+      const iframe = document.getElementById('audioPlayer');
+      iframe.style.display = 'block';
+      iframe.src = "https://www.youtube.com/embed/TgB6qiqPKC8?autoplay=1&controls=0";
+    }
+  </script>
+
+</body>
+</html>
