@@ -66,12 +66,20 @@
         content: url('images/banner_phone.jpg'); /* Use phone banner image */
       }
     }
+
+    /* Optional: Make the image or video clickable */
+    .clickable {
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Banner Image -->
-  <img src="images/banner.png" class="banner-image" alt="Banner Image" />
+  <!-- Link to Index -->
+  <a href="index.html" class="clickable">
+    <!-- Banner Image -->
+    <img src="images/banner.png" class="banner-image" alt="Banner Image" />
+  </a>
 
   <div class="image-wrapper">
     <div class="video-overlay">
