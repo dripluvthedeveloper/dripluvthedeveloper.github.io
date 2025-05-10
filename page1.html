@@ -47,8 +47,25 @@
       display: block;
     }
 
+    /* Laptop/Desktop (screen width > 768px) */
+    .desktop-view {
+      display: block;
+    }
+    .mobile-view {
+      display: none;
+    }
+
     /* Media Query for Phones (screen width <= 768px) */
     @media (max-width: 768px) {
+      /* Hide desktop content */
+      .desktop-view {
+        display: none;
+      }
+      .mobile-view {
+        display: block; /* Show mobile content */
+      }
+
+      /* Mobile-specific styles */
       .image-wrapper img {
         content: url('images/blogpost1_phone.jpg'); /* Switch to phone-sized image */
       }
@@ -57,7 +74,7 @@
         height: 200px; /* Adjust iframe size for phones */
       }
       .video-overlay {
-        top: 900%; /* Adjust video position on smaller screens */
+        top: 20%; /* Adjust video position on smaller screens */
         width: 80vw; /* Adjust width for smaller screens */
       }
 
@@ -70,18 +87,36 @@
 </head>
 <body>
 
-  <!-- Banner Image -->
-  <img src="images/banner.png" class="banner-image" alt="Banner Image" />
-
-  <div class="image-wrapper">
-    <div class="video-overlay">
-      <iframe 
-        src="https://www.youtube.com/embed/TgB6qiqPKC8" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-      </iframe>
+  <!-- Desktop View -->
+  <div class="desktop-view">
+    <!-- Banner Image for Desktop -->
+    <img src="images/banner.png" class="banner-image" alt="Banner Image" />
+    <div class="image-wrapper">
+      <div class="video-overlay">
+        <iframe 
+          src="https://www.youtube.com/embed/TgB6qiqPKC8" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <img src="images/blogpost1.jpg" alt="Blog Post Image" /> <!-- Default Image -->
     </div>
-    <img src="images/blogpost1.jpg" alt="Blog Post Image" /> <!-- Default Image -->
+  </div>
+
+  <!-- Mobile View -->
+  <div class="mobile-view">
+    <!-- Banner Image for Mobile -->
+    <img src="images/banner_phone.jpg" class="banner-image" alt="Banner Image" />
+    <div class="image-wrapper">
+      <div class="video-overlay">
+        <iframe 
+          src="https://www.youtube.com/embed/TgB6qiqPKC8" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <img src="images/blogpost1_phone.jpg" alt="Blog Post Image" /> <!-- Mobile Image -->
+    </div>
   </div>
 
 </body>
