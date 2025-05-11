@@ -29,14 +29,13 @@
       top: 900px;
       left: 46.5%;
       transform: translateX(-50%);
-      width: 90vw;
-      max-width: 560px;
+      width: 560px;
       z-index: 2;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     }
 
     .video-overlay iframe {
-      width: 100%;
+      width: 560px;
       height: 315px;
       border: none;
     }
@@ -47,15 +46,17 @@
       display: block;
     }
 
-    /* Responsive video positioning for mobile */
+    /* Media Query: Adjust for phones only */
     @media (max-width: 768px) {
       .video-overlay {
-        top: 800px;
-        width: 40vw;
+        top: 400px;        /* Moved up */
+        width: 280px;      /* Half the size */
+        left: 50%;         /* Recentre */
       }
 
       .video-overlay iframe {
-        height: 200px;
+        width: 280px;
+        height: 157px;
       }
     }
   </style>
