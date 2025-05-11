@@ -26,12 +26,12 @@
 
     .video-overlay {
       position: absolute;
-      top: 900px;
+      top: 900px; /* Default position for larger screens */
       left: 46.5%;
       transform: translateX(-50%);
-      width: 560px;
+      width: 560px; /* Default width for larger screens */
       z-index: 2;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Shadow for larger screens */
     }
 
     .video-overlay iframe {
@@ -46,17 +46,19 @@
       display: block;
     }
 
-    /* Media Query: Adjust for phones only */
+    /* Media Query for Phones (screen width <= 768px) */
     @media (max-width: 768px) {
+      /* Smaller video, moved up and no shadow for mobile */
       .video-overlay {
-        top: 240px;        /* Moved up */
-        width: 20vw;       /* Reduced to 35% of the width */
-        left: 50%;         /* Recentre */
+        top: 15px;           /* Move up by 10px */
+        width: 45vw;         /* Make it half the size */
+        left: 50%;
+        box-shadow: none;    /* Remove shadow */
       }
 
       .video-overlay iframe {
-        width: 100%;
-        height: 157px;     /* Adjust video height accordingly */
+        width: 100%;         /* Make iframe take up 100% width of its container */
+        height: 157px;       /* Adjust height proportionally */
       }
     }
   </style>
