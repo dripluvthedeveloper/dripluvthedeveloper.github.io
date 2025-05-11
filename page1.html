@@ -41,82 +41,57 @@
       border: none;
     }
 
-    /* Default styles for larger screens (laptop/desktops) */
     .banner-image {
       width: 100%;
+      height: auto;
       display: block;
     }
 
-    /* Laptop/Desktop (screen width > 768px) */
-    .desktop-view {
-      display: block;
-    }
-    .mobile-view {
-      display: none;
-    }
-
-    /* Media Query for Phones (screen width <= 768px) */
+    /* Responsive video positioning for mobile */
     @media (max-width: 768px) {
-      /* Hide desktop content */
-      .desktop-view {
-        display: none;
-      }
-      .mobile-view {
-        display: block; /* Show mobile content */
-      }
-
-      /* Mobile-specific styles */
-      .image-wrapper img {
-        content: url('images/blogpost1_phone.jpg'); /* Switch to phone-sized image */
-      }
-      .video-overlay iframe {
-        width: 100%;
-        height: 200px; /* Adjust iframe size for phones */
-      }
       .video-overlay {
-        top: 20%; /* Adjust video position on smaller screens */
-        width: 80vw; /* Adjust width for smaller screens */
+        top: 20%;
+        width: 80vw;
       }
 
-      /* Adjust banner for phone screens */
-      .banner-image {
-        content: url('images/banner_phone.jpg'); /* Use phone banner image */
+      .video-overlay iframe {
+        height: 200px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Desktop View -->
-  <div class="desktop-view">
-    <!-- Banner Image for Desktop -->
-    <img src="images/banner.png" class="banner-image" alt="Banner Image" />
-    <div class="image-wrapper">
-      <div class="video-overlay">
-        <iframe 
-          src="https://www.youtube.com/embed/TgB6qiqPKC8" 
-          allow="autoplay; encrypted-media" 
-          allowfullscreen>
-        </iframe>
-      </div>
-      <img src="images/blogpost1.jpg" alt="Blog Post Image" /> <!-- Default Image -->
-    </div>
-  </div>
+  <!-- Responsive Banner Image -->
+  <img 
+    src="images/banner.png"
+    srcset="
+      images/banner_phone.jpg 768w,
+      images/banner.png 769w
+    "
+    sizes="100vw"
+    class="banner-image"
+    alt="Banner Image"
+  />
 
-  <!-- Mobile View -->
-  <div class="mobile-view">
-    <!-- Banner Image for Mobile -->
-    <img src="images/banner_phone.jpg" class="banner-image" alt="Banner Image" />
-    <div class="image-wrapper">
-      <div class="video-overlay">
-        <iframe 
-          src="https://www.youtube.com/embed/TgB6qiqPKC8" 
-          allow="autoplay; encrypted-media" 
-          allowfullscreen>
-        </iframe>
-      </div>
-      <img src="images/blogpost1_phone.jpg" alt="Blog Post Image" /> <!-- Mobile Image -->
+  <div class="image-wrapper">
+    <div class="video-overlay">
+      <iframe 
+        src="https://www.youtube.com/embed/TgB6qiqPKC8" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>
     </div>
+    <img 
+      src="images/blogpost1.jpg"
+      srcset="
+        images/blogpost1_phone.jpg 768w,
+        images/blogpost1.jpg 769w
+      "
+      sizes="100vw"
+      alt="Blog Post Image"
+      style="width: 100%; display: block;"
+    />
   </div>
 
 </body>
