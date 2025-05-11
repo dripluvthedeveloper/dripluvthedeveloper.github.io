@@ -2,119 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hover Image Switch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 0;
       overflow: hidden;
+      height: 100%;
+      width: 100%;
     }
 
-    #main-image {
+    .full-image {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      transition: opacity 0.3s ease;
     }
 
-    /* Hover Zone for the left (existing) */
-    #hover-zone-left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 300px;
-      z-index: 2;
-      background-color: transparent;
-      cursor: pointer;
+    .desktop-image {
+      display: block;
     }
 
-    /* Hover Zone for the right (existing) */
-    #hover-zone-right {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 400px;
-      height: 100vh;
-      z-index: 2;
-      background-color: transparent;
-      cursor: pointer;
+    .phone-image {
+      display: none;
     }
 
-    /* Hover Zone for the bottom-left */
-    #hover-zone-bottom-left {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 600px;
-      height: 100px;
-      z-index: 2;
-      background-color: transparent;
-      cursor: pointer;
+    @media only screen and (max-width: 768px) {
+      .desktop-image {
+        display: none;
+      }
+
+      .phone-image {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-
-<!-- Hover Zones with local links -->
-<a href="tino.html" id="hover-zone-left">
-  <div></div>
-</a>
-
-<a href="page2.html" id="hover-zone-right">
-  <div></div>
-</a>
-
-<a href="page3.html" id="hover-zone-bottom-left">
-  <div></div>
-</a>
-
-<img id="main-image" src="images/muroti.png" alt="Muroti" />
-
-<script>
-  const hoverZoneLeft = document.getElementById('hover-zone-left');
-  const hoverZoneRight = document.getElementById('hover-zone-right');
-  const hoverZoneBottomLeft = document.getElementById('hover-zone-bottom-left');
-  const mainImage = document.getElementById('main-image');
-
-  const murotiPath = 'images/muroti.png';
-  const tinoPath = 'images/tino.png';
-  const jpPath = 'images/jp.png';
-  const dripluvPath = 'images/dripluv.png';
-
-  // Hover over the left side: show Tino
-  hoverZoneLeft.addEventListener('mouseenter', () => {
-    mainImage.src = tinoPath;
-  });
-
-  // Hover off the left side: show Muroti
-  hoverZoneLeft.addEventListener('mouseleave', () => {
-    mainImage.src = murotiPath;
-  });
-
-  // Hover over the right side: show JP
-  hoverZoneRight.addEventListener('mouseenter', () => {
-    mainImage.src = jpPath;
-  });
-
-  // Hover off the right side: show Muroti
-  hoverZoneRight.addEventListener('mouseleave', () => {
-    mainImage.src = murotiPath;
-  });
-
-  // Hover over the bottom-left: show Dripluv
-  hoverZoneBottomLeft.addEventListener('mouseenter', () => {
-    mainImage.src = dripluvPath;
-  });
-
-  // Hover off the bottom-left: show Muroti
-  hoverZoneBottomLeft.addEventListener('mouseleave', () => {
-    mainImage.src = murotiPath;
-  });
-</script>
-
+  <a href="tino.html">
+    <img src="images/LANDINGPAGE.jpg" alt="Landing Page" class="full-image desktop-image">
+    <img src="images/LANDINGPAGE_phone.jpg" alt="Landing Page Mobile" class="full-image phone-image">
+  </a>
 </body>
 </html>
