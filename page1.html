@@ -51,14 +51,14 @@
       /* Smaller video, moved up and no shadow for mobile */
       .video-overlay {
         top: 200px;           /* Move up by 10px */
-        width: 45vw;         /* Make it half the size */
+        width: 45vw;          /* Make it smaller */
         left: 50%;
-        box-shadow: none;    /* Remove shadow */
+        box-shadow: none;     /* Remove shadow */
       }
 
       .video-overlay iframe {
-        width: 100%;         /* Make iframe take up 100% width of its container */
-        height: 157px;       /* Adjust height proportionally */
+        width: 100%;          /* Make iframe take up 100% width of its container */
+        height: calc(45vw * 0.5625); /* Adjust height based on 16:9 aspect ratio */
       }
     }
   </style>
