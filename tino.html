@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Over Image</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      display: block;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 900px;
+      left: 46.5%;
+      transform: translateX(-50%);
+      width: 560px;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .video-overlay iframe {
+      width: 560px;
+      height: 315px;
+      border: none;
+    }
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Media Query: Adjust for phones only */
+    @media (max-width: 768px) {
+      .video-overlay {
+        top: 400px;        /* Moved up */
+        width: 280px;      /* Half the size */
+        left: 50%;         /* Recentre */
+      }
+
+      .video-overlay iframe {
+        width: 280px;
+        height: 157px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Banner Image -->
+  <img 
+    src="images/banner.png"
+    srcset="
+      images/banner_phone.jpg 768w,
+      images/banner.png 769w
+    "
+    sizes="100vw"
+    class="banner-image"
+    alt="Banner Image"
+  />
+
+  <div class="image-wrapper">
+    <div class="video-overlay">
+      <iframe 
+        src="https://www.youtube.com/embed/TgB6qiqPKC8" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <img 
+      src="images/blogpost1.jpg"
+      srcset="
+        images/blogpost1_phone.jpg 768w,
+        images/blogpost1.jpg 769w
+      "
+      sizes="100vw"
+      alt="Blog Post Image"
+      style="width: 100%; display: block;"
+    />
+  </div>
+
+</body>
+</html>
